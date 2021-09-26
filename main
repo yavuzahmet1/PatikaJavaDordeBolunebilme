@@ -4,13 +4,18 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Lütfen tek sayı giriniz.");
-        int girilenSayi = scanner.nextInt();
-        int total = 0;
-        for (int i = 0; i < girilenSayi; i++) {
-            if (i % 4 == 0) {
-                total += i
+        int total = 0, x = 0;
+        System.out.print("Kaç adet sayı girişi yapılacak\t: ");
+        int girilecekSayiAdedi = scanner.nextInt();
+
+        while (x < girilecekSayiAdedi) {
+            System.out.print("Sayı giriniz\t: ");
+            int girilenSayi = scanner.nextInt();
+            if (girilenSayi % 4 == 0) {
+                total += girilenSayi;
             }
+            x++;
+            System.out.println();
         }
         System.out.println("4'e bölünen sayıların toplamı\t: " + total);
     }
